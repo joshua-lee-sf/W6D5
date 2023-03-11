@@ -1,0 +1,18 @@
+<h1>99 CATS ALL THE CATS IN THE WORLD!</h1>
+
+
+ <% @cats.each do |cat| %>
+<ul> 
+   
+
+   <li><%= render cat.name %> </li> 
+   <li><%= render cat.birth_date %> </li> 
+   <li><%= cat.age %> </li> 
+   <li><%= cat.color %> </li> 
+   <li><%= cat.description %> </li> 
+   <li><%= cat.sex %> </li> 
+
+    
+ </ul>
+ 
+<% end %>

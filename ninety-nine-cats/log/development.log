@@ -36,3 +36,260 @@ Migrating to CreateCats (20230310220807)
   [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-03-10 15:29:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/bleung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/bleung/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 244.8ms | Allocations: 526)
+Completed 200 OK in 313ms (Views: 266.4ms | ActiveRecord: 0.0ms | Allocations: 2795)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:29:39 -0800
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatsControllers
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/1130309a6485e43a/variables" for 127.0.0.1 at 2023-03-10 15:29:40 -0800
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:31:06 -0800
+
+ActionController::RoutingError - uninitialized constant CatsController
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  CatsControllers
+            raise MissingController.new(error.message, error.name)
+            ^^^^^:
+
+Started POST "/__better_errors/c69b33314b772c02/variables" for 127.0.0.1 at 2023-03-10 15:31:06 -0800
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:31:58 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 3016)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/78e0095dc8d17bf3/variables" for 127.0.0.1 at 2023-03-10 15:31:59 -0800
+  [1m[36mCat Load (2.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:33:16 -0800
+Processing by CatsController#index as HTML
+Completed 406 Not Acceptable in 8ms (ActiveRecord: 0.0ms | Allocations: 1610)
+
+
+
+ActionController::MissingExactTemplate - CatsController#index is missing a template for request formats: text/html:
+
+Started POST "/__better_errors/b6099ef4e3b9ad9e/variables" for 127.0.0.1 at 2023-03-10 15:33:17 -0800
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:33:27 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/fb754d332fc888e9/variables" for 127.0.0.1 at 2023-03-10 15:33:27 -0800
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:34:43 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1270)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/1206276419f26009/variables" for 127.0.0.1 at 2023-03-10 15:34:43 -0800
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:34:47 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 987)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/76856632ca94cc93/variables" for 127.0.0.1 at 2023-03-10 15:34:47 -0800
+  [1m[36mCat Load (0.6ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:35:23 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1257)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/3ce80b9d85baa1b3/variables" for 127.0.0.1 at 2023-03-10 15:35:23 -0800
+  [1m[36mCat Load (0.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:35:29 -0800
+Processing by CatsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 987)
+
+
+
+ActionView::MissingTemplate - Missing template cats/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/bleung/Desktop/a:A/w6d5/W6D5/ninety-nine-cats/app/views"
+Did you mean?  /index
+               layouts/application:
+  app/controllers/cats_controller.rb:4:in `index'
+
+Started POST "/__better_errors/43cc7585a547e419/variables" for 127.0.0.1 at 2023-03-10 15:35:29 -0800
+  [1m[36mCat Load (0.3ms)[0m  [1m[34mSELECT "cats".* FROM "cats" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ (eval):72:in `block in render'
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:00 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.4ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:6
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 892)
+  Rendered layout layouts/application.html.erb (Duration: 84.3ms | Allocations: 7365)
+Completed 200 OK in 88ms (Views: 85.1ms | ActiveRecord: 2.4ms | Allocations: 8091)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:14 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:6
+  Rendered cats/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 2403)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 1.0ms | Allocations: 3101)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:15 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.1ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:6
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 1675)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 1.1ms | Allocations: 1896)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:17 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (3.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:6
+  Rendered cats/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 561)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 1683)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 3.7ms | Allocations: 1882)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:29 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.2ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:6
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 2397)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 1.2ms | Allocations: 3074)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:47 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.0ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 875)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 2398)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 2.0ms | Allocations: 3096)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:37:48 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1674)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.7ms | Allocations: 1895)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:39:51 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (2.8ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 1668)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 2.8ms | Allocations: 1867)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:39:52 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 1668)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.7ms | Allocations: 1867)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:39:54 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (1.9ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 1686)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.9ms | Allocations: 1885)
+
+
+Started GET "/cats" for 127.0.0.1 at 2023-03-10 15:53:57 -0800
+Processing by CatsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering cats/index.html.erb within layouts/application
+  [1m[36mCat Load (0.7ms)[0m  [1m[34mSELECT "cats".* FROM "cats"[0m
+  ↳ app/views/cats/index.html.erb:4
+  Rendered cats/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 3578)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 4690)
+Completed 200 OK in 32ms (Views: 32.3ms | ActiveRecord: 14.2ms | Allocations: 4887)
+
+
