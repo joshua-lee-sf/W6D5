@@ -1,0 +1,28 @@
+<h1>New Cat!</h1>
+
+<form action="<%=cats_url%>" method="POST">
+
+  <label for="name">Name</label>
+  <input type="text" name="cat[name]" id="name" value="<%#@cats.name%>">
+  <br>
+  <label for="birthdate">Birthdate: </label>
+  <input type="date" name="cat[birth_date]" id="birthdate", value="<%#@cats.birth_date%>">
+  <br>
+  <label for="color">Color:</label>
+  <select name="cat[color]" id="color">
+    <option disabled selected>Pick a color for your cat</option>
+    <option value="Black">Black</option>
+    <option value="Orange">Orange</option>
+    <option value="spotted">Spotted</option>
+  </select>
+  <br>
+  <label for="sex">Sex:</label>
+  <input type="text" name="cat[sex]" id="sex" value="<%#@cats.sex%>">
+  <br>
+  <label for="description">Description: </label>
+  <textarea type="text" name="cat[description]" id="description" value="<%#@cats.description%>"></textarea>
+
+  <br>
+  <button>Submit</button>
+
+</form>
